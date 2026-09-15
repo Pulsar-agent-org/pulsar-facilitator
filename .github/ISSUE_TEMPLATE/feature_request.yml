@@ -1,0 +1,48 @@
+name: Feature request
+description: Propose new work in the facilitator service
+labels: ["type:feature"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem and context
+      description: What is missing or hard today, and why does it matter?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+      description: What you propose to build, and the files it likely touches.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: >
+        How a reviewer will know it is done. A security-relevant change must ship
+        a test for the failure case, not only the success case.
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - "verify"
+        - "settle"
+        - "ops"
+        - "docs"
+    validations:
+      required: true
+  - type: dropdown
+    id: difficulty
+    attributes:
+      label: Difficulty
+      options:
+        - "good first issue"
+        - "intermediate"
+        - "advanced"
+    validations:
+      required: false
